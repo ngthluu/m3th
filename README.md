@@ -11,6 +11,7 @@ m3th run
 `file.m3th`
 
 ## Language specification
+m3th is a functional programming language with the motto: *Simple is perfect*.
 
 ### Entrypoint
 ```
@@ -23,6 +24,7 @@ fn main(): vacuum {
 ```
 // Comment here
 ```
+Developers can type markdown format in comments.
 
 ### Operator
 ```
@@ -66,9 +68,9 @@ when <expr1> {
 - `accum`: accumulate items
 
 ```
-all(lst, fn(immut c) { c * 2; })
-any(lst, fn(immut c) { c == 2; })
-accum(lst, 0, fn(mut s, immut c) { s = s + c; })
+all(lst, fn(c) -> c * 2)
+any(lst, fn(c) -> c == 2)
+accum(0, lst, fn(s, c) -> s + c)
 ```
 
 ### Functions
@@ -118,8 +120,8 @@ als.function()
 ```
 
 ### Notifications
-Used to notify developers when something changes.
-Similar to `deprecated` in other languages.
+Used to notify developers when something changes.  
+Similar to `deprecated` in other languages.  
 When compiling code, the compiler will notify developers.
 - `[outmeta(1.0.0)]`: Marks this feature as `deprecated` starting from version 1.0.0. The code still exists but is scheduled for removal.
 - `[remove(1.0.0)]`: Marks this feature as removed starting from version 1.0.0.
