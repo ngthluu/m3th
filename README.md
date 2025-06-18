@@ -116,3 +116,10 @@ Access to other packages:
 als.a
 als.function()
 ```
+
+### Notifications
+Used to notify developers when something changes.
+Similar to `deprecated` in other languages.
+When compiling code, the compiler will notify developers.
+- `[outmeta(1.0.0)]`: Marks this feature as `deprecated` starting from version 1.0.0. The code still exists but is scheduled for removal.
+- `[remove(1.0.0)]`: Marks this feature as removed starting from version 1.0.0.
