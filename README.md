@@ -1,7 +1,23 @@
 # m3th
 m3th (my simple programming language) compiler implementation
 
+## CLI
+```
+m3th build
+m3th run
+```
+
+## File extension
+`file.m3th`
+
 ## Language specification
+
+### Entrypoint
+```
+fn main(): vacuum {
+    // ...
+}
+```
 
 ### Comments
 ```
